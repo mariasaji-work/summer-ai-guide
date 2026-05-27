@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can I use this AI tool? — Decision guide for Summer Foundation & Housing Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1F3A5F;
+    --navy-deep: #142845;
+    --accent: #2E75B6;
+    --accent-soft: #E8F0F9;
+    --paper: #FBFAF7;
+    --paper-deep: #F4F1EA;
+    --ink: #1A1A1A;
+    --ink-soft: #555555;
+    --rule: #D9D4C8;
+
+    --tier-public-bg: #E5EFE7;
+    --tier-public-ink: #2D5938;
+    --tier-internal-bg: #DAE8FC;
+    --tier-internal-ink: #1F4F8F;
+    --tier-conf-bg: #FBE9D5;
+    --tier-conf-ink: #8A4A12;
+    --tier-rest-bg: #F8DCDC;
+    --tier-rest-ink: #8B1F1F;
+
+    --green: #3D6B47;
+    --green-soft: #E5EFE7;
+    --amber: #B5651D;
+    --amber-soft: #FBE9D5;
+    --red: #9B2C2C;
+    --red-soft: #F8DCDC;
+    --exception: #2E5A8A;
+    --exception-soft: #DEE9F4;
+    --hh-accent: #6B3FA0;
+    --hh-soft: #F1ECF8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  body {
+    background-image:
+      radial-gradient(at 15% 5%, rgba(46, 117, 182, 0.04), transparent 50%),
+      radial-gradient(at 85% 95%, rgba(31, 58, 95, 0.05), transparent 50%);
+  }
+
+  .page { max-width: 840px; margin: 0 auto; padding: 56px 32px 80px; }
+
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 32px; margin-bottom: 48px; }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  h1.title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  h1.title em { font-style: italic; font-weight: 400; color: var(--accent); }
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 300;
+    max-width: 640px;
+  }
+  .meta {
+    display: flex; gap: 24px; margin-top: 28px;
+    font-size: 13px; color: var(--ink-soft); flex-wrap: wrap;
+  }
+  .meta span strong { color: var(--navy); font-weight: 600; }
+
+  .intro { margin-bottom: 48px; }
+  .intro p { margin-bottom: 14px; }
+  .intro p.lede {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--navy);
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  .scope, .frameworks {
+    background: white;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+  .scope h3, .frameworks h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .scope ul, .frameworks ul { list-style: none; padding: 0; }
+  .scope li, .frameworks li {
+    font-size: 14px;
+    color: var(--ink);
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .scope li::before, .frameworks li::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+
+  .context-note {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 18px 22px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--ink);
+    line-height: 1.6;
+    border-radius: 2px;
+  }
+  .context-note strong { color: var(--navy); }
+  .context-note em { color: var(--navy); font-style: italic; }
+
+  .progress-bar { display: flex; gap: 6px; margin-bottom: 40px; }
+  .progress-step {
+    flex: 1; height: 3px; background: var(--rule); border-radius: 2px;
+    transition: background 0.4s ease;
+  }
+  .progress-step.active { background: var(--accent); }
+  .progress-step.done   { background: var(--navy); }
+
+  /* Org indicator at the top of the quiz once chosen */
+  .org-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+  }
+  .org-indicator.sf { background: var(--accent-soft); color: var(--navy); border: 1px solid var(--accent); }
+  .org-indicator.hh { background: var(--hh-soft); color: var(--hh-accent); border: 1px solid var(--hh-accent); }
+  .org-indicator::before {
+    content: '';
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+  .org-indicator .change {
+    margin-left: 8px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+  .org-indicator .change:hover { opacity: 1; }
+
+  .question-card {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 44px 44px 36px;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(31, 58, 95, 0.04), 0 12px 32px -16px rgba(31, 58, 95, 0.12);
+    animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-number {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 0.04em;
+  }
+  .q-text {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+  .q-helper {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    padding-left: 14px;
+    border-left: 2px solid var(--accent-soft);
+  }
+
+  .answers { display: flex; flex-direction: column; gap: 10px; }
+  .answer-btn {
+    text-align: left;
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 18px 22px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 15.5px;
+    color: var(--ink);
+    line-height: 1.4;
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .answer-btn::before {
+    content: '';
+    width: 14px; height: 14px;
+    border: 1.5px solid var(--rule);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+    transition: all 0.18s ease;
+  }
+  .answer-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateX(2px);
+  }
+  .answer-btn:hover::before {
+    border-color: var(--accent);
+    box-shadow: inset 0 0 0 3px var(--accent);
+  }
+  .answer-btn .label { flex: 1; font-weight: 500; }
+  .answer-btn .sublabel {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-weight: 400;
+    margin-top: 4px;
+    line-height: 1.5;
+  }
+
+  .nav-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rule);
+  }
+  .back-btn {
+    background: none; border: none;
+    color: var(--ink-soft);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer; padding: 8px 0;
+    transition: color 0.2s;
+  }
+  .back-btn:hover { color: var(--navy); }
+  .back-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+  .trail { font-size: 12px; color: var(--ink-soft); letter-spacing: 0.06em; }
+
+  .result { animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+
+  .tier-banner {
+    border-radius: 2px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .tier-banner.public   { background: var(--tier-public-bg); }
+  .tier-banner.internal { background: var(--tier-internal-bg); }
+  .tier-banner.conf     { background: var(--tier-conf-bg); }
+  .tier-banner.rest     { background: var(--tier-rest-bg); }
+
+  .tier-dot {
+    width: 56px; height: 56px; border-radius: 50%;
+    flex-shrink: 0; position: relative;
+    box-shadow: 0 0 0 6px rgba(255,255,255,0.4);
+  }
+  .tier-banner.public   .tier-dot { background: var(--tier-public-ink); }
+  .tier-banner.internal .tier-dot { background: var(--tier-internal-ink); }
+  .tier-banner.conf     .tier-dot { background: var(--tier-conf-ink); }
+  .tier-banner.rest     .tier-dot { background: var(--tier-rest-ink); }
+
+  .tier-text { flex: 1; }
+  .tier-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .tier-banner.public   .tier-eyebrow { color: var(--tier-public-ink); }
+  .tier-banner.internal .tier-eyebrow { color: var(--tier-internal-ink); }
+  .tier-banner.conf     .tier-eyebrow { color: var(--tier-conf-ink); }
+  .tier-banner.rest     .tier-eyebrow { color: var(--tier-rest-ink); }
+
+  .tier-name {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 4px;
+  }
+  .tier-detail {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .ndis-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: white;
+    border: 1px solid var(--tier-rest-ink);
+    color: var(--tier-rest-ink);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+
+  /* Housing Hub - specific overlay (Practice Standards reminder) */
+  .hh-overlay {
+    background: var(--hh-soft);
+    border-left: 3px solid var(--hh-accent);
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .hh-overlay strong { color: var(--hh-accent); }
+  .hh-overlay-label {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--hh-accent);
+    background: white;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    border: 1px solid var(--hh-accent);
+  }
+
+  .verdict {
+    padding: 32px 36px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+    border-left: 4px solid;
+    background: white;
+  }
+  .verdict.go        { border-color: var(--green); }
+  .verdict.cond      { border-color: var(--amber); }
+  .verdict.no        { border-color: var(--red); }
+  .verdict.exception { border-color: var(--exception); background: linear-gradient(to right, var(--exception-soft) 0%, white 30%); }
+
+  .verdict-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .verdict.go        .verdict-label { color: var(--green); }
+  .verdict.cond      .verdict-label { color: var(--amber); }
+  .verdict.no        .verdict-label { color: var(--red); }
+  .verdict.exception .verdict-label { color: var(--exception); }
+
+  .verdict-headline {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(24px, 3.2vw, 30px);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .verdict-rationale {
+    font-size: 15.5px;
+    color: var(--ink);
+    line-height: 1.65;
+    max-width: 660px;
+  }
+  .verdict-rationale strong { color: var(--navy); font-weight: 600; }
+
+  .tools-section { margin-bottom: 32px; }
+  .section-heading {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+  }
+
+  .tool {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 20px 24px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .tool.chosen { border: 2px solid var(--accent); background: var(--accent-soft); }
+  .tool-status {
+    width: 12px; height: 12px; border-radius: 50%;
+    margin-top: 7px; flex-shrink: 0;
+  }
+  .tool-status.yes       { background: var(--green); box-shadow: 0 0 0 4px var(--green-soft); }
+  .tool-status.cond      { background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft); }
+  .tool-status.no        { background: var(--red);   box-shadow: 0 0 0 4px var(--red-soft); }
+  .tool-status.exception { background: var(--exception); box-shadow: 0 0 0 4px var(--exception-soft); }
+
+  .tool-body { flex: 1; }
+  .tool-name-row {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .tool-name {
+    font-family: 'Fraunces', serif;
+    font-size: 17px; font-weight: 500;
+    color: var(--navy);
+  }
+  .chosen-pill {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    background: white;
+    padding: 3px 8px;
+    border-radius: 2px;
+    border: 1px solid var(--accent);
+  }
+  .tool-verdict {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .tool-verdict.yes       { color: var(--green); }
+  .tool-verdict.cond      { color: var(--amber); }
+  .tool-verdict.no        { color: var(--red); }
+  .tool-verdict.exception { color: var(--exception); }
+  .tool-note { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+  .licence-note {
+    font-size: 12.5px;
+    color: var(--accent);
+    margin-top: 8px;
+    font-style: italic;
+  }
+
+  .conditions {
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    padding: 28px 32px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+  }
+  .conditions h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 18px; font-weight: 500;
+    color: var(--navy); margin-bottom: 14px;
+  }
+  .conditions ol { list-style: none; counter-reset: cond-counter; }
+  .conditions li {
+    counter-increment: cond-counter;
+    position: relative; padding-left: 32px;
+    margin-bottom: 12px; font-size: 14.5px; line-height: 1.55;
+  }
+  .conditions li::before {
+    content: counter(cond-counter);
+    position: absolute; left: 0; top: 0;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px; font-weight: 500;
+    color: var(--accent);
+    width: 22px;
+  }
+  .conditions strong { color: var(--navy); }
+
+  .exception-detail {
+    background: var(--exception-soft);
+    border: 1px solid var(--exception);
+    border-left: 4px solid var(--exception);
+    padding: 24px 28px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+  }
+  .exception-detail h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px; font-weight: 500;
+    color: var(--exception); margin-bottom: 10px;
+  }
+  .exception-detail p {
+    font-size: 14.5px; line-height: 1.6;
+    color: var(--ink); margin-bottom: 12px;
+  }
+  .exception-detail strong { color: var(--navy); }
+
+  .preconditions-checklist {
+    background: white;
+    border: 1px solid var(--rule);
+    padding: 20px 24px;
+    margin-top: 16px;
+    border-radius: 2px;
+  }
+  .preconditions-checklist h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+  .preconditions-checklist ul {
+    list-style: none;
+    padding: 0;
+  }
+  .preconditions-checklist li {
+    padding: 6px 0 6px 26px;
+    position: relative;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .preconditions-checklist li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    color: var(--exception);
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .out-of-scope {
+    background: white;
+    border: 1px dashed var(--red);
+    padding: 18px 22px;
+    margin-top: 16px;
+    border-radius: 2px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .out-of-scope strong { color: var(--red); }
+
+  .cant-use {
+    background: var(--red-soft);
+    border: 1px solid var(--red);
+    border-left: 4px solid var(--red);
+    padding: 28px 32px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+  }
+  .cant-use h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 22px; font-weight: 500;
+    color: var(--red); margin-bottom: 12px;
+  }
+  .cant-use p {
+    font-size: 15px; color: var(--ink);
+    line-height: 1.6; margin-bottom: 10px;
+  }
+
+  .escalate {
+    background: var(--navy);
+    color: white;
+    padding: 28px 32px;
+    border-radius: 2px;
+    margin-bottom: 32px;
+  }
+  .escalate h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px; font-weight: 500;
+    margin-bottom: 8px; color: white;
+  }
+  .escalate p {
+    font-size: 14.5px; line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+  }
+
+  .actions {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    padding-top: 28px; border-top: 1px solid var(--rule);
+  }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px; font-weight: 500;
+    padding: 13px 24px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    border: 1px solid var(--navy);
+  }
+  .btn.primary { background: var(--navy); color: white; }
+  .btn.primary:hover { background: var(--navy-deep); transform: translateY(-1px); }
+  .btn.secondary { background: transparent; color: var(--navy); }
+  .btn.secondary:hover { background: var(--navy); color: white; }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  footer p { margin-bottom: 6px; }
+  footer strong { color: var(--navy); font-weight: 600; }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 640px) {
+    .page { padding: 32px 20px 60px; }
+    .question-card { padding: 28px 22px 24px; }
+    .verdict, .conditions, .escalate, .cant-use, .exception-detail { padding: 24px 22px; }
+    .tier-banner { padding: 22px 20px; gap: 16px; flex-direction: column; align-items: flex-start; }
+    .tier-dot { width: 44px; height: 44px; }
+    .tool { padding: 16px 18px; gap: 14px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .answers, .actions, .nav-row, .progress-bar, .question-card { display: none; }
+    .result { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="eyebrow">Decision guide  ·  AI tool use</div>
+    <h1 class="title">Can I use this AI tool <em>for this?</em></h1>
+    <p class="subtitle">For staff at Summer Foundation and Housing Hub. Tell me which organisation you’re working for, what you’re working with, and the tool you have in mind — I’ll tell you if it’s safe and which conditions apply.</p>
+    <div class="meta">
+      <span><strong>For:</strong> Summer Foundation & Housing Hub staff</span>
+      <span><strong>Aligned to:</strong> Privacy Act 1988, OAIC AI guidance, NDIS Code of Conduct, NDIS Practice Standards, NDIA data sovereignty</span>
+      <span><strong>Version:</strong> Draft 2.1</span>
+    </div>
+  </header>
+
+  <section class="intro" id="intro">
+    <p class="lede">Eight short questions, a clear verdict, and a specific answer about your tool, your data, and the conditions that apply.</p>
+
+    <p>Most of the data we touch involves real people’s lives — NDIS participants, housing seekers, OTs, research and co-design contributors. Some of it sits at the strictest end of the Privacy Act, and some categories are also covered by the NDIS Code of Conduct and (for Housing Hub) the NDIS Practice Standards. That doesn’t make AI off-limits, but it does mean we have to be specific about who you are, which tool, for which purpose, with which protections in place.</p>
+
+    <div class="scope">
+      <h3>AI tools in scope</h3>
+      <ul>
+        <li>Microsoft 365 Copilot (Enterprise) — including Copilot Notetaker in Teams meetings — in our tenant</li>
+        <li>ChatGPT Enterprise — in our workspace</li>
+        <li>Claude for Work / Claude Enterprise — in our workspace</li>
+        <li>Gemini for Workspace (Enterprise) — in our workspace</li>
+      </ul>
+    </div>
+
+    <div class="frameworks">
+      <h3>Frameworks this guide reflects</h3>
+      <ul>
+        <li><em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles — APP 6 (use), APP 8 (cross-border), APP 11 (security)</li>
+        <li>OAIC <em>Guidance on privacy and the use of commercially available AI products</em> (October 2024)</li>
+        <li>NDIS Code of Conduct — applies to all NDIS providers, registered or unregistered; Principle 2 requires respect for the privacy of people with disability</li>
+        <li>NDIS Practice Standards (Core Module — Information Management) — applies to <strong>Housing Hub as a registered NDIS provider</strong></li>
+        <li>NDIA data sovereignty requirement that NDIS-identifiable data is stored in Australia (including re-identifiable data, backups, archives, copies)</li>
+        <li>NDIS Commission AI position statements (Feb 2026), including on AI use in behaviour support plans</li>
+      </ul>
+    </div>
+
+    <div class="context-note">
+      <strong>A note on the contradiction some of you have spotted.</strong> Staff have been told two things that sound contradictory: that <em>Copilot Notetaker is okay for meetings with NDIS participants</em>, and that <em>sensitive information cannot be used with any AI tool</em>. Both are partly true. This guide resolves the contradiction by introducing the concept of <strong>approved exceptions</strong>: tightly-defined use cases on properly-configured tools, sanctioned by the AI Working Group. Copilot Notetaker for meetings with NDIS participants is the first such exception, and applies to both Summer Foundation and Housing Hub.
+    </div>
+
+    <p style="margin-top: 24px;">It is a decision aid, not a substitute for our data-classification document or for the AI Working Group’s advice in edge cases. When in doubt, send a quick note to the AI Working Group rather than guessing.</p>
+    <div class="actions" style="border-top: none; padding-top: 24px;">
+      <button class="btn primary" onclick="start()">Begin</button>
+    </div>
+  </section>
+
+  <div id="quiz" class="hidden">
+    <div id="org-indicator-container"></div>
+    <div class="progress-bar" id="progress"></div>
+    <div id="question-container"></div>
+    <div class="nav-row">
+      <button class="back-btn" id="back-btn" onclick="back()">← Back</button>
+      <div class="trail" id="trail"></div>
+    </div>
+  </div>
+
+  <div id="result" class="hidden result"></div>
+
+  <footer>
+    <p><strong>About this guide.</strong> Draft for review. Aligned to the OAIC’s October 2024 AI guidance, the Australian Privacy Principles, the <em>Privacy Act 1988</em> (Cth), the NDIS Code of Conduct, the NDIS Practice Standards (Core Module Information Management — applicable to Housing Hub as a registered NDIS provider), NDIA data sovereignty requirements, and NDIS Commission AI position statements (February 2026). Reflects information held across Summer Foundation and Housing Hub.</p>
+    <p>This is general guidance and not legal advice. For NDIS participant data, OT reports, behavioural support information, restrictive practices documentation, mandatory reporting, child safety, or HR matters, follow the relevant professional and legal requirements regardless of what this tool says.</p>
+    <p style="margin-top: 12px;"><strong>Questions?</strong> Contact the AI Working Group.</p>
+  </footer>
+</div>
+
+<script>
+// ============================================================
+// TOOLS IN SCOPE
+// ============================================================
+const TOOLS = {
+  copilot: {
+    name: 'Microsoft 365 Copilot (Enterprise)',
+    residency_note: 'Australian data residency available in our M365 tenant; no training on customer data.'
+  },
+  chatgpt: {
+    name: 'ChatGPT Enterprise',
+    residency_note: 'No training on customer data; Australian data residency at rest available for new enterprise workspaces.'
+  },
+  claude: {
+    name: 'Claude for Work / Enterprise',
+    residency_note: 'No training on customer data on business plans; workspace configuration and residency to be confirmed with IT.'
+  },
+  gemini: {
+    name: 'Gemini for Workspace (Enterprise)',
+    residency_note: 'Enterprise protections in the Workspace tenant; no training on customer data on Workspace plans.'
+  }
+};
+
+// ============================================================
+// QUESTIONS — Q1 is now organisation
+// ============================================================
+const QUESTIONS = [
+  {
+    id: 'org',
+    text: 'Which organisation are you working for right now?',
+    helper: 'This matters because Housing Hub is a registered NDIS provider, which means the NDIS Practice Standards apply on top of everything else. Summer Foundation is unregistered, so the NDIS Code of Conduct applies but the Practice Standards don\u2019t. The questions are the same for both, but the conditions and documentation requirements are tighter for Housing Hub work.',
+    options: [
+      { label: 'Summer Foundation', sublabel: 'Research, advocacy, policy, demonstration housing, co-design, sector engagement. NDIS Code of Conduct applies; Practice Standards do not.', value: 'sf' },
+      { label: 'Housing Hub', sublabel: 'The Housing Hub platform connecting people with disability to suitable housing. Registered NDIS provider \u2014 NDIS Practice Standards (Core Module Information Management) apply in addition to the Privacy Act.', value: 'hh' },
+      { label: 'Both / I work across both', sublabel: 'Choose this if the specific piece of work involves both entities. The guide will apply the stricter Housing Hub rules to be safe.', value: 'both' }
+    ]
+  },
+  {
+    id: 'ndis_high_risk',
+    text: 'Is this information about a behaviour support plan, a restrictive practice, a reportable incident, mandatory reporting, or child safety?',
+    helper: 'These categories are regulated separately by the NDIS Commission, child safety frameworks, or mandatory reporting laws. AI use in these areas is held to a higher standard than ordinary sensitive information, and the NDIS Commission has issued specific guidance (including on AI use in behaviour support plans). If you\u2019re working with this kind of content, this guide will route you straight to the AI Working Group rather than try to give a general answer.',
+    options: [
+      { label: 'Yes \u2014 at least one of these applies', value: 'yes' },
+      { label: 'No \u2014 none of these apply', value: 'no' }
+    ]
+  },
+  {
+    id: 'sensitive',
+    text: 'Does the information relate to a person with disability or their support, in any way?',
+    helper: 'In our work, anything that identifies a person as having a disability \u2014 directly or by implication \u2014 is sensitive information under the Privacy Act. This includes NDIS numbers and plans, OT functional assessments, behaviour or health plans, hospital discharge summaries, co-design participant lived-experience disclosures, story-telling videos and photos, support coordination notes, and Housing Hub seeker profiles where accessibility needs are tied to a named person.',
+    options: [
+      { label: 'Yes \u2014 it identifies or implies someone with disability', sublabel: 'e.g. an NDIS plan, an OT report, a co-design transcript, a housing seeker profile, a participant story, support notes, meeting with an NDIS participant.', value: 'yes' },
+      { label: 'No \u2014 there\u2019s no link to disability or a named person', sublabel: 'e.g. internal strategy, generic sector content, fully aggregated/anonymised data with no possibility of re-identification.', value: 'no' },
+      { label: 'I\u2019m not sure', sublabel: 'If you can\u2019t rule it out, choose this. The guide will treat it cautiously.', value: 'unsure' }
+    ],
+    skipIf: (a) => a.ndis_high_risk === 'yes'
+  },
+  {
+    id: 'personal',
+    text: 'Does the information identify any specific person?',
+    helper: 'Names, email addresses, phone numbers, NDIS numbers, photos, voice recordings, video, or any combination of details that lets someone work out who an individual is \u2014 even indirectly. Includes Housing Hub housing seekers, housing providers, OTs, support coordinators, family members, staff and partner contacts.',
+    options: [
+      { label: 'Yes \u2014 there is identifiable personal information', sublabel: 'e.g. webinar attendees, housing seeker contact details, support coordinator emails, staff names in a roster.', value: 'yes' },
+      { label: 'No \u2014 fully de-identified, anonymous, or aggregate', sublabel: 'e.g. Housing Hub Housing Seeker Snapshot aggregated data, summary stats with no re-identification risk.', value: 'no' },
+      { label: 'It\u2019s already public information', sublabel: 'e.g. a publicly published research paper, a public property listing, a media release, our website content.', value: 'public' }
+    ],
+    skipIf: (a) => a.ndis_high_risk === 'yes'
+  },
+  {
+    id: 'use_type',
+    text: 'What kind of AI work do you want to do?',
+    helper: 'The kind of work matters as much as the data. Note-taking in a live meeting (with the meeting\u2019s consent and recording disclosure) is a fundamentally different activity from batch-processing reports through a chat tool. The first can be an approved exception; the second is much harder to defend.',
+    options: [
+      { label: 'Live note-taking or transcription in a meeting', sublabel: 'e.g. Copilot Notetaker in a Teams meeting with an NDIS participant, with the meeting recording transparently announced.', value: 'notetaking' },
+      { label: 'Drafting, summarising, or translating my own work', sublabel: 'e.g. summarising my own meeting notes, drafting an email, restructuring a document I wrote.', value: 'drafting' },
+      { label: 'Analysing or processing information about other people', sublabel: 'e.g. running participant interview transcripts through a chat tool, asking AI to find patterns in housing seeker profiles, analysing OT reports.', value: 'analysing' },
+      { label: 'Searching or asking questions of general knowledge', sublabel: 'e.g. asking about NDIS funding rules, policy background, sector statistics \u2014 no personal information in the prompt.', value: 'general' }
+    ],
+    skipIf: (a) => a.ndis_high_risk === 'yes'
+  },
+  {
+    id: 'tool',
+    text: 'Which AI tool are you thinking of using?',
+    helper: 'Pick the tool you have in mind. If you don\u2019t currently have a licence, IT can arrange one \u2014 say so on the next question and the guide will still tell you whether the tool fits your use case before you request access.',
+    options: [
+      { label: 'Microsoft 365 Copilot (Enterprise) \u2014 including Notetaker', sublabel: 'In our M365 tenant. Good for Word, Outlook, Excel, Teams, and meeting note-taking.', value: 'copilot' },
+      { label: 'ChatGPT Enterprise', sublabel: 'OpenAI\u2019s enterprise plan, in our workspace.', value: 'chatgpt' },
+      { label: 'Claude for Work / Claude Enterprise', sublabel: 'Anthropic\u2019s enterprise plan, in our workspace.', value: 'claude' },
+      { label: 'Gemini for Workspace (Enterprise)', sublabel: 'Google\u2019s enterprise AI, inside our Workspace tenant.', value: 'gemini' },
+      { label: 'Not sure yet \u2014 recommend one', sublabel: 'The guide will suggest which tool best fits your use case.', value: 'any' }
+    ],
+    skipIf: (a) => a.ndis_high_risk === 'yes'
+  },
+  {
+    id: 'licence',
+    text: 'Do you already have a licence for that tool?',
+    helper: 'If not, IT can arrange one. The guide will still tell you whether the tool fits your use case so you can decide whether to bother requesting access.',
+    options: [
+      { label: 'Yes \u2014 I have access', value: 'yes' },
+      { label: 'No \u2014 I would need IT to arrange a licence', value: 'no' }
+    ],
+    skipIf: (a) => a.ndis_high_risk === 'yes' || a.tool === 'any'
+  },
+  {
+    id: 'purpose',
+    text: 'What is the purpose, and would the person whose information this is reasonably expect this use?',
+    helper: 'Under APP 6, you can use personal information for the purpose it was collected for, or for a secondary purpose the individual would reasonably expect. The NDIS Code of Conduct adds a further obligation to respect the privacy of people with disability. AI processing is a new kind of use that may or may not be covered by existing consents.',
+    options: [
+      { label: 'Within the original purpose', sublabel: 'e.g. taking notes in a meeting with a participant about their support; summarising attendance for the team that ran a webinar.', value: 'within' },
+      { label: 'Related and reasonably expected', sublabel: 'e.g. drafting communications to OTs in our network about a new resource they signed up to hear about.', value: 'related' },
+      { label: 'New or unrelated \u2014 would be hard to explain to the person', sublabel: 'e.g. analysing patterns across housing seeker profiles in a way they didn\u2019t agree to; running participant interview transcripts through AI without specific consent.', value: 'new' },
+      { label: 'No individual involved \u2014 purely internal or aggregate', sublabel: 'e.g. drafting internal strategy, working with Housing Seeker Snapshot aggregated data, summarising a public report.', value: 'na' }
+    ],
+    skipIf: (a) => a.ndis_high_risk === 'yes'
+  },
+  {
+    id: 'preconditions',
+    text: 'Have the technical pre-conditions for handling sensitive participant data been confirmed for this tool?',
+    helper: 'Even where an AI use is approved as an exception, the OAIC expects organisations using SaaS tools to have proper governance in place. The AI Working Group has set out the conditions that must be met before sensitive participant data is processed in any AI tool.',
+    options: [
+      { label: 'Yes \u2014 all four conditions have been verified for this tool', sublabel: 'Australian tenant residency confirmed, "Move data across regions" turned off, MFA enabled, role-based access controls in place, and a Privacy Impact Assessment completed.', value: 'all_met' },
+      { label: 'Some are met but not all \u2014 or I need to check', sublabel: 'If you don\u2019t personally know that all four are in place, choose this. IT and the AIWG can confirm.', value: 'partial' },
+      { label: 'I don\u2019t know what these conditions mean', sublabel: 'Choose this and the guide will explain what\u2019s needed.', value: 'unknown' }
+    ],
+    skipIf: (a) =>
+      a.ndis_high_risk === 'yes' ||
+      !(a.sensitive === 'yes' || a.sensitive === 'unsure') ||
+      a.use_type !== 'notetaking' ||
+      a.tool !== 'copilot'
+  },
+  {
+    id: 'consent',
+    text: 'Has the individual been told about, or consented to, AI use of their information?',
+    helper: 'For sensitive information about a person with disability, consent matters. Under the NDIS Code of Conduct, valid consent must be voluntary, current, specific, informed, and given with capacity. A general Privacy Policy that doesn\u2019t explicitly mention AI is unlikely to be sufficient. For meeting note-taking, this usually means announcing the AI note-taking at the start of the meeting and giving the participant the opportunity to decline.',
+    options: [
+      { label: 'Yes \u2014 informed consent (or clear meeting disclosure) covers this AI use', sublabel: 'e.g. the AI note-taker is announced at the start of the meeting and the participant agreed to it; a co-design consent form explicitly mentions AI processing.', value: 'yes' },
+      { label: 'No, or I\u2019m not sure', sublabel: 'Including: a general Privacy Policy that doesn\u2019t mention AI; older consents that pre-date AI use.', value: 'no' },
+      { label: 'Not applicable \u2014 no sensitive information involved', value: 'na' }
+    ],
+    skipIf: (a) =>
+      a.ndis_high_risk === 'yes' ||
+      (a.sensitive !== 'yes' && a.sensitive !== 'unsure')
+  }
+];
+
+let answers = {};
+let currentIndex = 0;
+
+function getActive() {
+  return QUESTIONS.filter(q => !q.skipIf || !q.skipIf(answers));
+}
+
+// "Both" is treated as Housing Hub for safety (stricter rules)
+function effectiveOrg() {
+  if (answers.org === 'hh' || answers.org === 'both') return 'hh';
+  return 'sf';
+}
+function orgLabel() {
+  if (answers.org === 'hh') return 'Housing Hub';
+  if (answers.org === 'both') return 'Both organisations';
+  return 'Summer Foundation';
+}
+
+function start() {
+  document.getElementById('intro').classList.add('hidden');
+  document.getElementById('quiz').classList.remove('hidden');
+  renderQuestion();
+}
+
+function renderOrgIndicator() {
+  const container = document.getElementById('org-indicator-container');
+  if (!answers.org) { container.innerHTML = ''; return; }
+  const orgClass = effectiveOrg() === 'hh' ? 'hh' : 'sf';
+  container.innerHTML = `
+    <div class="org-indicator ${orgClass}">
+      Working for: ${orgLabel()}
+      <span class="change" onclick="changeOrg()">change</span>
+    </div>
+  `;
+}
+
+function changeOrg() {
+  answers = {};
+  currentIndex = 0;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const active = getActive();
+  const q = active[currentIndex];
+  if (!q) { showResult(); return; }
+
+  renderOrgIndicator();
+
+  const progressEl = document.getElementById('progress');
+  progressEl.innerHTML = '';
+  active.forEach((_, i) => {
+    const step = document.createElement('div');
+    step.className = 'progress-step ' + (i < currentIndex ? 'done' : i === currentIndex ? 'active' : '');
+    progressEl.appendChild(step);
+  });
+
+  document.getElementById('trail').textContent = `Question ${currentIndex + 1} of ${active.length}`;
+  document.getElementById('back-btn').disabled = currentIndex === 0;
+
+  const container = document.getElementById('question-container');
+  container.innerHTML = `
+    <div class="question-card">
+      <div class="q-number">Question ${String(currentIndex + 1).padStart(2, '0')}</div>
+      <h2 class="q-text">${q.text}</h2>
+      <p class="q-helper">${q.helper}</p>
+      <div class="answers">
+        ${q.options.map(opt => `
+          <button class="answer-btn" onclick="answer('${q.id}', '${opt.value}')">
+            <div>
+              <div class="label">${opt.label}</div>
+              ${opt.sublabel ? `<div class="sublabel">${opt.sublabel}</div>` : ''}
+            </div>
+          </button>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function answer(qid, value) {
+  answers[qid] = value;
+  currentIndex++;
+  const active = getActive();
+  if (currentIndex >= active.length) showResult();
+  else renderQuestion();
+}
+
+function back() {
+  if (currentIndex === 0) return;
+  currentIndex--;
+  const active = getActive();
+  const prevQ = active[currentIndex];
+  if (prevQ) delete answers[prevQ.id];
+  renderQuestion();
+}
+
+// ============================================================
+// TIER LOGIC
+// ============================================================
+function computeTier() {
+  if (answers.ndis_high_risk === 'yes') return 'ndis_special';
+  if (answers.sensitive === 'yes' || answers.sensitive === 'unsure') return 'restricted';
+  if (answers.personal === 'public') return 'public';
+  if (answers.personal === 'yes') return 'confidential';
+  return 'internal';
+}
+
+const TIER_META = {
+  public: {
+    class: 'public', name: 'Public', eyebrow: 'Data classification',
+    detail: 'Information already in the public domain \u2014 published research, public property listings, media releases, public website content. No privacy restrictions on AI use.'
+  },
+  internal: {
+    class: 'internal', name: 'Internal', eyebrow: 'Data classification',
+    detail: 'Internal information with no identifiable personal information \u2014 strategy documents, aggregate Housing Hub data, fully de-identified research summaries. Sensible to use our enterprise tools by default.'
+  },
+  confidential: {
+    class: 'conf', name: 'Confidential', eyebrow: 'Data classification',
+    detail: 'Personal information under the Privacy Act \u2014 names, emails, contact details, housing seeker enquiries that don\u2019t mention disability specifics, sector contacts, webinar attendance, staff information. Use approved enterprise tools for the purpose it was collected.'
+  },
+  restricted: {
+    class: 'rest', name: 'Sensitive / Restricted', eyebrow: 'Data classification',
+    detail: 'Sensitive information under the Privacy Act and the NDIS Code of Conduct \u2014 disability information, NDIS data, OT reports, participant lived experience, behaviour or health plans, photos and videos of people with disability. The default position is no AI tool without AI Working Group approval. Specific use cases may be approved as exceptions where conditions are met.',
+    badge: 'NDIS-regulated information'
+  },
+  ndis_special: {
+    class: 'rest', name: 'NDIS regulated \u2014 high-risk category', eyebrow: 'Data classification',
+    detail: 'Behaviour support plans, restrictive practices, reportable incidents, mandatory reporting, or child safety information. The NDIS Commission and other regulators have specific requirements for these categories that override general AI guidance.',
+    badge: 'Special regulatory regime'
+  }
+};
+
+// ============================================================
+// HH OVERLAY — shown on Confidential and Restricted tier results
+// ============================================================
+function hhOverlayHtml(tier) {
+  if (effectiveOrg() !== 'hh') return '';
+  if (tier === 'public' || tier === 'internal') return '';
+  if (tier === 'ndis_special') {
+    return `
+      <div class="hh-overlay">
+        <div class="hh-overlay-label">Housing Hub \u2014 Practice Standards overlay</div>
+        <strong>NDIS Practice Standards apply.</strong> As a registered NDIS provider, Housing Hub is bound by the Information Management standard (Core Module). This category sits inside the NDIS Commission\u2019s direct regulatory reach \u2014 incidents, restrictive practices, and behaviour support plans are subject to specific reporting workflows and oversight. Practice Standards compliance is mandatory; document any decision and escalate to your Practice Standards lead in addition to the AIWG.
+      </div>
+    `;
+  }
+  if (tier === 'restricted') {
+    return `
+      <div class="hh-overlay">
+        <div class="hh-overlay-label">Housing Hub \u2014 Practice Standards overlay</div>
+        <strong>NDIS Practice Standards apply.</strong> As a registered NDIS provider, Housing Hub is bound by the Information Management standard (Core Module). For this kind of data, that means: keep an auditable record of any AI use, ensure participants can access information held about them, restrict access on a need-to-know basis, and document the decision for audit purposes. Approved exceptions still apply, but compliance evidence is mandatory \u2014 not optional.
+      </div>
+    `;
+  }
+  // confidential
+  return `
+    <div class="hh-overlay">
+      <div class="hh-overlay-label">Housing Hub \u2014 Practice Standards overlay</div>
+      <strong>NDIS Practice Standards apply.</strong> Even for ordinary personal information, Housing Hub is required by the Information Management standard to keep information accurate, current, confidential, accessible to participants, and only used by workers as appropriate. Document the AI use for audit purposes.
+    </div>
+  `;
+}
+
+// ============================================================
+// PER-TOOL VERDICTS
+// ============================================================
+function toolVerdict(toolKey, tier, useType, consent, preconditions, org) {
+  const t = TOOLS[toolKey];
+  const orgPrefix = org === 'hh' ? 'For Housing Hub work, ' : '';
+
+  if (tier === 'ndis_special') {
+    return {
+      status: 'no',
+      verdict: 'Do not use \u2014 special regulatory regime',
+      note: `${orgPrefix}behaviour support plans, restrictive practices, reportable incidents, mandatory reporting, and child-safety information are governed by specific regulatory regimes (NDIS Commission, child-safety frameworks, mandatory-reporting law). Do not use ${t.name} or any general AI tool for this work. Contact the AI Working Group and the relevant practice or compliance lead before proceeding.`
+    };
+  }
+
+  if (tier === 'restricted') {
+    // Copilot Notetaker exception
+    if (toolKey === 'copilot' && useType === 'notetaking') {
+      if (preconditions === 'all_met' && consent === 'yes') {
+        return {
+          status: 'exception',
+          verdict: 'Approved exception \u2014 proceed with conditions',
+          note: `Microsoft 365 Copilot Notetaker for live meetings with NDIS participants is the first approved exception for sensitive participant data, and applies to both Summer Foundation and Housing Hub. All four technical pre-conditions are met and informed consent or clear meeting disclosure is in place. Proceed using the standard meeting workflow.${org === 'hh' ? ' For Housing Hub, also record the AI use in your compliance log per the Information Management Practice Standard.' : ''}`
+        };
+      }
+      if (preconditions === 'all_met' && consent !== 'yes') {
+        return {
+          status: 'cond',
+          verdict: 'Conditions met \u2014 but consent gap',
+          note: `Technical pre-conditions are in place, but the participant hasn\u2019t been informed about, or consented to, AI note-taking. Announce the AI note-taker at the start of the meeting and give the participant an opportunity to decline. The exception only applies where consent or disclosure is in place.`
+        };
+      }
+      return {
+        status: 'cond',
+        verdict: 'Awaiting pre-condition verification',
+        note: `The Copilot Notetaker exception only applies once IT and the AI Working Group have confirmed all four technical pre-conditions for our tenant: Australian residency, "Move data across regions" off, MFA enabled, role-based access control, and a Privacy Impact Assessment completed. Check status with IT before proceeding.`
+      };
+    }
+
+    if (consent === 'yes') {
+      return {
+        status: 'cond',
+        verdict: 'Possible \u2014 needs AIWG approval',
+        note: `${t.name} has the right baseline protections (${t.residency_note}), but this use is outside the current approved-exception list. Sensitive information about a person with disability needs AI Working Group sign-off for the specific use case, even with consent in place.${org === 'hh' ? ' For Housing Hub, AIWG approval needs to be evidenced as part of Practice Standards compliance.' : ''}`
+      };
+    }
+    return {
+      status: 'no',
+      verdict: 'Do not use',
+      note: `Sensitive information about a person with disability cannot go into ${t.name} for this use. Enterprise protections alone don\u2019t authorise it \u2014 there must be an approved exception, technical pre-conditions met, and consent or clear disclosure that covers the AI processing.`
+    };
+  }
+
+  if (tier === 'confidential') {
+    if (useType === 'analysing') {
+      return {
+        status: 'cond',
+        verdict: 'Conditional \u2014 purpose needs checking',
+        note: `${t.name} is technically suitable for confidential information, but analysing or processing information about other people goes further than the day-to-day uses people would expect. Check with the AI Working Group, or get fresh consent, before proceeding.${org === 'hh' ? ' For Housing Hub, the Information Management Practice Standard requires that participant information is only used by workers as appropriate \u2014 document the basis.' : ''}`
+      };
+    }
+    return {
+      status: 'yes',
+      verdict: 'Suitable',
+      note: `${t.name} is appropriate for this use. ${t.residency_note} Use the information only for the stated purpose, and keep a human in the loop for any decisions affecting an individual.${org === 'hh' ? ' Record the AI use in line with the Information Management Practice Standard.' : ''}`
+    };
+  }
+
+  if (tier === 'internal') {
+    return {
+      status: 'yes',
+      verdict: 'Suitable',
+      note: `${t.name} is appropriate for internal work that doesn\u2019t involve personal information. ${t.residency_note}`
+    };
+  }
+
+  return {
+    status: 'yes',
+    verdict: 'Suitable',
+    note: `${t.name} is fine for public information. Be careful not to combine public information with internal context in the same prompt \u2014 the combination might no longer be public.`
+  };
+}
+
+function recommendTool(tier, useType) {
+  if (tier === 'ndis_special') return null;
+  if (tier === 'restricted' && useType === 'notetaking') return 'copilot';
+  if (tier === 'restricted') return null;
+  return 'copilot';
+}
+
+// ============================================================
+// RESULT
+// ============================================================
+function showResult() {
+  document.getElementById('quiz').classList.add('hidden');
+
+  const tier = computeTier();
+  const tierMeta = TIER_META[tier];
+  const chosenToolKey = answers.tool;
+  const useType = answers.use_type;
+  const consent = answers.consent;
+  const preconditions = answers.preconditions;
+  const needsLicence = answers.licence === 'no';
+  const org = effectiveOrg();
+
+  const toolResults = {};
+  for (const key of Object.keys(TOOLS)) {
+    toolResults[key] = toolVerdict(key, tier, useType, consent, preconditions, org);
+  }
+
+  let chosenVerdict, headline, rationale;
+  let recommendedKey = null;
+
+  if (tier === 'ndis_special') {
+    chosenVerdict = 'no';
+    headline = 'Stop \u2014 this is governed by a specific regulatory regime';
+    rationale = `Behaviour support plans, restrictive practices, reportable incidents, mandatory reporting, and child-safety information are regulated separately. Do not put this content into any AI tool. Contact the AI Working Group${org === 'hh' ? ' and your Housing Hub Practice Standards lead' : ' and your practice or compliance lead'} before going any further.`;
+  } else if (chosenToolKey === 'any') {
+    recommendedKey = recommendTool(tier, useType);
+    if (!recommendedKey) {
+      chosenVerdict = 'no';
+      headline = 'No general-purpose AI tool is suitable for this use';
+      rationale = 'This combination of data and purpose falls outside what any of our four enterprise tools is currently approved for. Contact the AI Working Group before proceeding.';
+    } else {
+      const rv = toolResults[recommendedKey];
+      chosenVerdict = rv.status;
+      headline = (rv.status === 'yes')
+        ? `Recommended tool: ${TOOLS[recommendedKey].name}`
+        : (rv.status === 'exception'
+            ? `Approved exception applies \u2014 using ${TOOLS[recommendedKey].name}`
+            : (rv.status === 'cond' ? 'Recommended tool is suitable, with conditions' : 'No tool is suitable for this use'));
+      rationale = rv.note;
+    }
+  } else {
+    const cv = toolResults[chosenToolKey];
+    chosenVerdict = cv.status;
+    if (cv.status === 'yes') {
+      headline = `Yes \u2014 ${TOOLS[chosenToolKey].name} is suitable`;
+    } else if (cv.status === 'exception') {
+      headline = `${TOOLS[chosenToolKey].name} \u2014 approved exception`;
+    } else if (cv.status === 'cond') {
+      headline = `${TOOLS[chosenToolKey].name} \u2014 conditional`;
+    } else {
+      headline = `${TOOLS[chosenToolKey].name} \u2014 do not use for this`;
+    }
+    rationale = cv.note;
+  }
+
+  let conditions = [];
+  if (tier === 'ndis_special') {
+    conditions = [
+      'Do not place this information in any AI tool \u2014 Copilot, ChatGPT Enterprise, Claude, Gemini, or anything else, including Copilot Notetaker.',
+      'Follow the specific regulatory process for this category (NDIS Commission requirements for behaviour support plans and restrictive practices; mandatory reporting workflows for child safety and reportable incidents).',
+      `Contact the AI Working Group and ${org === 'hh' ? 'your Housing Hub Practice Standards lead' : 'your practice or compliance lead'} before any AI involvement is considered.`
+    ];
+    if (org === 'hh') {
+      conditions.push('Log the decision in your Practice Standards evidence record \u2014 even \u201cwe chose not to use AI\u201d is an Information Management decision that should be documented.');
+    }
+  } else if (tier === 'restricted' && chosenVerdict === 'exception') {
+    conditions = [
+      'Announce the AI note-taker at the start of the meeting and confirm the participant is comfortable.',
+      'Use Copilot Notetaker as part of the standard Teams meeting workflow \u2014 no copy-pasting transcripts into other AI tools afterwards.',
+      'Store the resulting transcript and summary in the location approved by IT \u2014 do not forward it outside the tenant.',
+      'If the participant later asks for the recording or transcript to be deleted, action that request via the standard data handling process.',
+      'If the meeting topic shifts into a regulated category (behaviour support, restrictive practices, mandatory reporting), turn the notetaker off.'
+    ];
+    if (org === 'hh') {
+      conditions.push('Record the AI use against the participant\u2019s file per the Information Management Practice Standard \u2014 keep the audit trail current.');
+    }
+  } else if (tier === 'restricted' && chosenVerdict === 'cond' && preconditions !== 'all_met') {
+    conditions = [
+      'Contact IT to confirm: Australian tenant residency, "Move data across regions" off, MFA enabled across the team, and role-based access controls in place.',
+      'Confirm with the AI Working Group whether a Privacy Impact Assessment has been completed for this tool.',
+      'Do not use the tool for sensitive participant data until all four conditions are verified.',
+      'If the work is urgent and the conditions are not yet met, contact the AIWG for a case-by-case exception.'
+    ];
+  } else if (tier === 'restricted' && chosenVerdict === 'cond' && consent !== 'yes') {
+    conditions = [
+      'Announce the AI note-taker at the start of the meeting before any recording or transcription begins.',
+      'Give the participant a real opportunity to decline \u2014 don\u2019t treat silence as consent.',
+      'If the participant declines, take notes manually instead.',
+      'Document that the disclosure was made.'
+    ];
+  } else if (tier === 'restricted') {
+    conditions = [
+      'Do not place this information in any AI tool \u2014 there is no approved exception for this use yet.',
+      'Use only the systems we\u2019ve approved for participant, case, and research information.',
+      'If you genuinely need AI assistance, contact the AI Working Group with the data type, the tool, the purpose, and any consent or disclosure in place.',
+      'A licence for an enterprise AI tool, on its own, does not authorise use with sensitive information about a person with disability.'
+    ];
+  } else if (tier === 'confidential' && useType === 'analysing') {
+    conditions = [
+      'Re-frame the use so it sits within the original purpose for which the data was collected \u2014 or',
+      'Get explicit consent from the individual for this new use \u2014 or',
+      'Ask the AI Working Group whether the use is defensible under APP 6 and the NDIS Code of Conduct.',
+      'Document whichever path you take.'
+    ];
+  } else if (tier === 'confidential') {
+    conditions = [
+      'Use the tool inside our tenant or workspace \u2014 not a personal account.',
+      'Confirm Australian data residency or equivalent protection (APP 8) before processing.',
+      'Use the information only for the purpose it was collected.',
+      'Keep a human in the loop for any decisions affecting the individual.'
+    ];
+    if (org === 'hh') {
+      conditions.push('Document the AI use briefly \u2014 Housing Hub\u2019s Practice Standards compliance includes keeping records of how participant information is handled.');
+    }
+  } else if (tier === 'internal') {
+    conditions = [
+      'Use whichever enterprise AI tool you have access to in our tenant/workspace.',
+      'If the scope of the task changes and personal or sensitive information starts to come into play, come back to this guide.'
+    ];
+  } else {
+    conditions = [
+      'Use any of the four enterprise tools you have access to.',
+      'Be careful about combining public information with internal context in the same prompt \u2014 the combination might no longer be public.'
+    ];
+  }
+
+  const resultEl = document.getElementById('result');
+  resultEl.classList.remove('hidden');
+
+  const allToolsHtml = Object.keys(TOOLS).map(key => {
+    const t = TOOLS[key];
+    const r = toolResults[key];
+    const isChosen = (key === chosenToolKey) || (chosenToolKey === 'any' && key === recommendedKey);
+    const chosenPill = isChosen
+      ? (chosenToolKey === 'any' ? '<span class="chosen-pill">Recommended</span>' : '<span class="chosen-pill">Your tool</span>')
+      : '';
+    const licencePill = (isChosen && needsLicence)
+      ? '<p class="licence-note">No licence yet \u2014 IT can arrange one.</p>'
+      : '';
+    return `
+      <div class="tool ${isChosen ? 'chosen' : ''}">
+        <div class="tool-status ${r.status}"></div>
+        <div class="tool-body">
+          <div class="tool-name-row">
+            <span class="tool-name">${t.name}</span>
+            ${chosenPill}
+          </div>
+          <div class="tool-verdict ${r.status}">${r.verdict}</div>
+          <div class="tool-note">${r.note}</div>
+          ${licencePill}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const exceptionBlock = (chosenVerdict === 'exception') ? `
+    <div class="exception-detail">
+      <h3>Approved exception \u2014 Copilot Notetaker for NDIS participant meetings</h3>
+      <p>This is the first approved exception to our general rule that sensitive information cannot be processed by AI tools. It applies <strong>to both Summer Foundation and Housing Hub</strong>, <strong>only</strong> to live note-taking in Microsoft Teams meetings using Copilot Notetaker, where the meeting includes NDIS participants and the technical conditions below have been verified.</p>
+      <div class="preconditions-checklist">
+        <h4>Technical pre-conditions verified for this tool</h4>
+        <ul>
+          <li>Tenant Primary Provisioned Geography is Australia</li>
+          <li>"Move data across regions" toggle is off in the M365 admin centre</li>
+          <li>Multi-factor authentication (MFA) is enabled across the team</li>
+          <li>Role-based access controls (RBAC) are configured and reviewed</li>
+          <li>Privacy Impact Assessment (PIA) has been completed for this use</li>
+        </ul>
+      </div>
+      <div class="out-of-scope">
+        <strong>What this exception does NOT cover:</strong> using Copilot or any other AI tool to analyse the resulting transcript later, copy-pasting transcripts into a chat tool, processing batches of OT reports, working with behaviour support plans or restrictive practices, or any AI use outside live meeting note-taking. Those remain "no" unless separately approved.
+      </div>
+    </div>
+  ` : '';
+
+  const cantUseBlock = (tier === 'ndis_special') ? `
+    <div class="cant-use">
+      <h3>This information is regulated separately</h3>
+      <p>Behaviour support plans, restrictive practices, reportable incidents, mandatory reporting, and child-safety information are governed by specific regulatory regimes that sit above general privacy and AI rules. The NDIS Commission has issued specific guidance, including a February 2026 position statement on AI use in behaviour support plans.</p>
+      <p>Do not use any of the four enterprise AI tools \u2014 Copilot, ChatGPT Enterprise, Claude, or Gemini \u2014 for this work. Contact the AI Working Group and the relevant practice or compliance lead before proceeding in any way.</p>
+    </div>
+  ` : (tier === 'restricted' && chosenVerdict === 'no' && useType !== 'notetaking') ? `
+    <div class="cant-use">
+      <h3>This information does not have an approved AI path yet</h3>
+      <p>Sensitive information about a person with disability is not approved for general AI use across any of our four enterprise tools. The only current approved exception is Copilot Notetaker for live meeting note-taking, with technical pre-conditions and consent in place.</p>
+      <p>If you genuinely need AI assistance for this work, contact the AI Working Group \u2014 additional exceptions may be approved on a case-by-case basis, but they require a Privacy Impact Assessment and proper governance.</p>
+    </div>
+  ` : '';
+
+  const tierBadge = tierMeta.badge
+    ? `<div><span class="ndis-badge">${tierMeta.badge}</span></div>`
+    : '';
+
+  const orgIndicatorHtml = `
+    <div class="org-indicator ${org === 'hh' ? 'hh' : 'sf'}">
+      Verdict for: ${orgLabel()}
+    </div>
+  `;
+
+  resultEl.innerHTML = `
+    ${orgIndicatorHtml}
+
+    <div class="tier-banner ${tierMeta.class}">
+      <div class="tier-dot"></div>
+      <div class="tier-text">
+        <div class="tier-eyebrow">${tierMeta.eyebrow}</div>
+        <div class="tier-name">${tierMeta.name}</div>
+        <div class="tier-detail">${tierMeta.detail}</div>
+        ${tierBadge}
+      </div>
+    </div>
+
+    ${hhOverlayHtml(tier)}
+
+    <div class="verdict ${chosenVerdict}">
+      <div class="verdict-label">${
+        chosenVerdict === 'yes'       ? 'Verdict \u2014 Go' :
+        chosenVerdict === 'exception' ? 'Verdict \u2014 Approved exception' :
+        chosenVerdict === 'cond'      ? 'Verdict \u2014 Conditional' :
+                                         'Verdict \u2014 Do not use'
+      }</div>
+      <h2 class="verdict-headline">${headline}</h2>
+      <p class="verdict-rationale">${rationale}</p>
+    </div>
+
+    ${exceptionBlock}
+    ${cantUseBlock}
+
+    ${tier !== 'ndis_special' ? `
+    <div class="tools-section">
+      <h3 class="section-heading">All four enterprise tools \u2014 side by side</h3>
+      <p class="section-sub">Green = suitable. Blue = approved exception. Amber = conditional. Red = do not use.</p>
+      ${allToolsHtml}
+    </div>
+    ` : ''}
+
+    ${conditions.length ? `
+    <div class="conditions">
+      <h3>${
+        (chosenVerdict === 'no')        ? 'What to do' :
+        (chosenVerdict === 'cond')      ? 'What to do' :
+        (chosenVerdict === 'exception') ? 'Conditions for using the exception' :
+                                           'Conditions of use'
+      }</h3>
+      <ol>
+        ${conditions.map(c => `<li>${c}</li>`).join('')}
+      </ol>
+    </div>
+    ` : ''}
+
+    ${(chosenVerdict === 'no' || chosenVerdict === 'cond') ? `
+    <div class="escalate">
+      <h3>Contact the AI Working Group${org === 'hh' ? ' (and your Practice Standards lead)' : ''}</h3>
+      <p>Send a short note describing: (1) which organisation the work is for; (2) the type of information; (3) the tool you want to use; (4) the purpose; (5) whether consent or disclosure is in place; and (6) whether the four technical pre-conditions have been verified for the tool. They will come back with a written decision.</p>
+    </div>
+    ` : ''}
+
+    <div class="actions">
+      <button class="btn primary" onclick="reset()">Start a new check</button>
+      <button class="btn secondary" onclick="window.print()">Print or save as PDF</button>
+    </div>
+  `;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function reset() {
+  answers = {};
+  currentIndex = 0;
+  document.getElementById('result').classList.add('hidden');
+  document.getElementById('result').innerHTML = '';
+  document.getElementById('intro').classList.remove('hidden');
+  document.getElementById('quiz').classList.add('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
